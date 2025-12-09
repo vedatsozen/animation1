@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen max-w-screen flex flex-row justify-center">
+
+    <nav class="w-2/12 h-full flex flex-col justify-start items-center gap-4 p-4">
+
+        <ul class="flex flex-col justify-center items-center gap-4 p-4 text-2xl tracking-wide">
+            <li>
+                <i class="menu bi bi-list text-3xl cursor-pointer active:text-2xl"></i>
+            </li>
+            <li class="active">
+                <a href="#" class="allbtn">All</a>
+            </li>
+            <li class="active">
+                <a href="#" class="menbtn">Men</a>
+            </li>
+            <li class="active">
+                <a href="#" class="womenbtn">Women</a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        
+        $(document).ready(function(){
+           $(".active").addClass("hidden");
+           $(".menu").click(function(){
+                $(this).toggleClass("bi-list bi-x");
+               $(".active").toggleClass("hidden");
+           });
+
+           $(".allbtn").click(function(){
+                $(".tshirt").show();
+           });
+
+           $(".menbtn").click(function() {
+                $(".tshirt").hide();
+                $(".men").show();
+                
+           });
+
+           $(".womenbtn").click(function() {  
+            $(".tshirt").hide();
+                $(".women").show();
+              
+           })
+        }
+        );
+    </script>
+
+    <header class="rightside w-10/12 grid grid-cols-3 justify-start items-center gap-4 p-12 text-center">
+      
+        <img src="imgs/tshirt1.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt women">
+        <img src="imgs/tshirt2.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt women">
+        <img src="imgs/tshirt3.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt women">
+        <img src="imgs/tshirt4.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt women">
+        <img src="imgs/tshirt5.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt men">
+        <img src="imgs/tshirt6.jpg" alt="tshirt1" class="h-96 w-full object-cover tshirt men">
+  
+  
+       
+
+    </header>
+
+</body>
+</html>
